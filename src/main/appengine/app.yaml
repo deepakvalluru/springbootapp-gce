@@ -1,5 +1,12 @@
-# service: springbootapp-gce # Id of the service
+service: springbootapp-gce-v1 # Id of the service
 env: flex       # Flex environment
 runtime: java   # Java runtime
 runtime_config:
   jdk: openjdk8 # use OpenJDK 8
+
+handlers:
+- url: /.*
+  script: this field is required, but ignored
+
+manual_scaling:
+  instances: 1  
